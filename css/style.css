@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --blue: #0b8ed4;
+    --light: #f1f6f8;
+    --text: #4a4a4a;
+    --line: #e6e6e6;
+    --content: 1092px;
+    --gutter: calc((100% - var(--content)) / 2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend', Arial, sans-serif;
+    background: #fff;
+    color: var(--text);
+    min-width: 1200px;
+}
+
+/* ---------- Barra superior ---------- */
+.Topo {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    padding: 0 var(--gutter);
+    background: #f5f5f5;
+}
+
+.Topo h4 {
+    font-size: 13px;
+    font-weight: 300;
+    color: #555;
+    line-height: 16px;
+    white-space: nowrap;
+}
+
+.welcome-text {
+    margin-right: auto;
+}
+
+.track-text,
+.offers-text {
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid #d9d9d9;
+}
+
+.deliver-text {
+    margin-left: 16px;
+}
+
+/* ---------- Cabeçalho ---------- */
+.Fixado {
+    display: flex;
+    align-items: center;
+    height: 81px;
+    padding: 0 var(--gutter);
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+}
+
+.menu {
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid var(--blue);
+    background: transparent;
+    color: var(--blue);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.MegaMart {
+    margin-left: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: 0;
+}
+
+.search {
+    flex: 0 0 462px;
+    height: 43px;
+    margin-left: 199px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--light);
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--text);
+    outline: none;
+}
+
+.search::placeholder {
+    color: #6b6b6b;
+    font-weight: 300;
+}
+
+.sign-in,
+.cart {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.sign-in {
+    margin-left: auto;
+}
+
+.cart {
+    margin-left: 19px;
+    padding-left: 19px;
+    border-left: 1px solid var(--line);
+    line-height: 24px;
+}
+
+/* ---------- Categorias ---------- */
+.options {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 62px;
+    padding: 0 var(--gutter);
+    border-bottom: 1px solid var(--line);
+}
+
+.options select {
+    height: 32px;
+    padding: 0 30px 0 14px;
+    border: none;
+    border-radius: 16px;
+    background-color: var(--light);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%230b8ed4' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 11px center;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.options select:first-child {
+    background-color: var(--blue);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    color: #fff;
+}
+
+.options select:nth-child(1) { width: 103px; }
+.options select:nth-child(2) { width: 134px; }
+.options select:nth-child(3) { width: 140px; }
+.options select:nth-child(4) { width: 92px; }
+.options select:nth-child(5) { width: 111px; }
+.options select:nth-child(6) { width: 88px; }
+.options select:nth-child(7) { width: 161px; }
+.options select:nth-child(8) { width: 177px; }
+
+/* ---------- Carrossel ---------- */
+.body-carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 18px 0 57px;
+    background: #fff;
+}
+
+.carousel-container {
+    position: relative;
+    width: var(--content);
+    height: 288px;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #20274a;
+}
+
+/* cada imagem ocupa 100% do quadro e desliza via translateX no JS */
+.carousel-images img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #20274a;
+    color: #fff;
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    background-color: #eef5f9;
+    color: var(--blue);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #dcebf3;
+}
+
+.btn-prev {
+    left: -32px;
+}
+
+.btn-next {
+    right: -33px;
+}
+
+/* ---------- Indicadores (criados pelo JS) ---------- */
+.carousel-dots {
+    position: absolute;
+    left: 82px;
+    bottom: 33px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.carousel-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    transition: width 0.3s;
+}
+
+.carousel-dots span.active {
+    width: 22px;
+}
